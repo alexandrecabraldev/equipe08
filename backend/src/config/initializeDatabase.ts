@@ -12,6 +12,7 @@ const initialPoolOptions: PoolOptions = {
   host: process.env.DB_HOST,
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'root',
+  port: Number(process.env.DB_PORT) || 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
