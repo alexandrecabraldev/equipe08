@@ -8,6 +8,7 @@ const poolOptions: PoolOptions = {
   user: process.env.DB_USER || 'root',          // Usuário do banco de dados
 password: process.env.DB_PASSWORD || 'root',      // Senha do banco de dados
 database: process.env.DB_DATABASE || 'codigo_certo_db', // Nome do banco de dados a ser utilizado
+port: Number(process.env.DB_PORT) || 3306,
 waitForConnections: true,                     // Esperar por conexões disponíveis no pool
 connectionLimit: 10,                          // Número máximo de conexões no pool
 queueLimit: 0                                 // Número máximo de conexões na fila (0 = ilimitado)
